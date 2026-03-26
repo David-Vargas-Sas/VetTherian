@@ -1,0 +1,245 @@
+:root {
+    --primary: #cdb4db;   /* lila */
+    --secondary: #a2d2ff; /* azul */
+    --accent: #ffafcc;    /* rosado */
+    --bg: #fef6f9;
+    --card: #ffffff;
+    --text: #5a4e6d;
+    --border: #eee;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== LOGIN ===== */
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* FONDO DEGRADADO PRO */
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* TARJETA GLASS */
+.login-card {
+    width: 320px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    animation: fadeIn 0.4s ease;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(200,200,255,0.5);
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 6px rgba(205,180,219,0.6);
+}
+
+.input-error {
+    border-color: #ff6b6b;
+}
+
+/* ===== BOTONES ===== */
+button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn {
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* PRINCIPAL */
+.btn-primary {
+    background: linear-gradient(135deg, #cdb4db, #a2d2ff);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ACCIONES */
+.btn-edit {
+    background: var(--secondary);
+}
+
+.btn-edit:hover {
+    background: #8ec5f5;
+}
+
+.btn-delete {
+    background: var(--accent);
+}
+
+.btn-delete:hover {
+    background: #ff8fab;
+}
+
+/* ===== ERROR ===== */
+.error {
+    color: #ff6b6b;
+    font-size: 12px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: var(--primary);
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.sidebar button:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    animation: fadeIn 0.3s ease;
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--accent);
+    color: var(--text);
+}
+
+td, th {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #faf8ff;
+}
+
+tr:hover {
+    background: #f3e8ff;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    width: 400px;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ===== ANIMACIÓN ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

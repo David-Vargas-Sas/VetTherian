@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VetApp Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>🐾 VetTherian</h2>
+
+        <button onclick="cargarVista('mascotas')">🐶 Mascotas</button>
+        <button onclick="cargarVista('propietarios')">👤 Propietarios</button>
+        <button onclick="cargarVista('veterinarios')">🩺 Veterinarios</button>
+
+        <hr>
+        <button onclick="logout()">🚪 Salir</button>
+    </aside>
+
+    <!-- CONTENIDO DINÁMICO -->
+    <main class="main">
+        <div id="contenido"></div>
+    </main>
+
+</div>
+
+<!-- MODAL GLOBAL -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<!-- TEMPLATE (OBLIGATORIO PARA LA ACTIVIDAD) -->
+<template id="fila-template">
+    <tr>
+        <td class="col1"></td>
+        <td class="col2"></td>
+        <td class="col3"></td>
+        <td>
+            <button class="btn btn-edit editar">✏️</button>
+            <button class="btn btn-delete eliminar">🗑️</button>
+        </td>
+    </tr>
+</template>
+
+<!-- SCRIPTS -->
+<script src="js/app.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/mascotas.js"></script>
+<script src="js/propietarios.js"></script>
+<script src="js/veterinarios.js"></script>
+
+</body>
+</html>

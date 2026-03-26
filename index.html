@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VetApp Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <h2>🐾 VetTherian</h2>
+        <p class="subtitle">Sistema Veterinario</p>
+
+        <div class="form-group">
+            <input type="text" id="usuario" placeholder="Usuario">
+            <small id="error-user" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Contraseña">
+            <small id="error-pass" class="error"></small>
+        </div>
+
+        <button class="btn btn-primary" onclick="login()">Ingresar</button>
+
+        <p id="error-general" class="error"></p>
+
+    </div>
+</div>
+
+<script>
+    // Verificar si el usuario ya está autenticado
+    if (localStorage.getItem("auth")) {
+        window.location.href = "dashboard.html";
+    }
+
+    function login() {
+        const user = document.getElementById("usuario").value.trim();
+        const pass = document.getElementById("password").value.trim();
+
+        if (!user || !pass) {
+            document.getElementById("error-general").innerText = "Campos obligatorios";
+            return;
+        }
+
+        if (user === "admin" && pass === "1234") {
+            localStorage.setItem("auth", "true");
+            window.location.href = "dashboard.html";
+        } else {
+            document.getElementById("error-general").innerText = "Credenciales incorrectas";
+        }
+    }
+</script>
+
+</body>
+</html>
