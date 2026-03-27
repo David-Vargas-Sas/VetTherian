@@ -30,6 +30,7 @@ body {
 }
 
 .login-wrapper {
+    position: relative;
     min-height: 100vh;
     width: 100%;
 
@@ -41,6 +42,8 @@ body {
 }
 
 .login-card {
+    position: relative;
+    z-index: 2;
     width: 340px;
     padding: 35px;
 
@@ -281,5 +284,81 @@ tr:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+/* ===== BURBUJAS ===== */
+.bubbles {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.bubbles span {
+    background: rgba(255,255,255,0.6); /* 🔥 más visibles */
+    box-shadow: 0 0 10px rgba(255,255,255,0.4); /* brillo */
+    position: absolute;
+    display: block;
+    bottom: -120px;
+
+    width: 40px;
+    height: 40px;
+
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+
+    animation: subir 20s linear infinite;
+}
+
+/* tamaños y posiciones random */
+.bubbles span:nth-child(1) {
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 18s;
+}
+.bubbles span:nth-child(2) {
+    left: 25%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 22s;
+}
+.bubbles span:nth-child(3) {
+    left: 40%;
+    animation-duration: 17s;
+}
+.bubbles span:nth-child(4) {
+    left: 60%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 25s;
+}
+.bubbles span:nth-child(5) {
+    left: 75%;
+    animation-duration: 19s;
+}
+.bubbles span:nth-child(6) {
+    left: 90%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 15s;
+}
+
+/* animación */
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
     }
 }
