@@ -76,17 +76,7 @@ dashboard.html
 
 ## 👨‍💻 Autor
 
-David Vargas
-Desarrollador de Software
-
----
-
-## 📌 Próximas Mejoras (Opcional)
-
-* 🔗 Integración con backend (Spring Boot)
-* 🔐 Autenticación real
-* 🔔 Notificaciones en UI (sin alert)
-* 📊 Dashboard con métricas
-* 📱 Diseño responsive completo
+* David Vargas
+* Desarrollador de Software
 
 ---
