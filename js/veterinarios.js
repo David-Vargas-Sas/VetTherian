@@ -32,7 +32,7 @@ function modalVeterinario(index = null) {
         <input id="especialidad" value="${v.especialidad || ''}" placeholder="Especialidad">
         <input id="contacto" value="${v.contacto || ''}" placeholder="Contacto">
 
-        <button onclick="guardarVeterinario(${index})">Guardar</button>
+        <button class="btn btn-primary" onclick="guardarVeterinario(${index})">Guardar</button>
     `);
 }
 

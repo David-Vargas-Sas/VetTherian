@@ -32,7 +32,7 @@ function modalPropietario(index = null) {
         <input id="telefono" value="${p.telefono || ''}" placeholder="Teléfono">
         <input id="direccion" value="${p.direccion || ''}" placeholder="Dirección">
 
-        <button onclick="guardarPropietario(${index})">Guardar</button>
+        <button class="btn btn-primary" onclick="guardarPropietario(${index})">Guardar</button>
     `);
 }
 
